@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaHarvest - Smart Rainwater Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-container">
+        <div class="background-gradient"></div>
+        <div class="particle-system">
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="weather-effects">
+            <div class="rain-particles"></div>
+            <div class="cloud-layer"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-tint"></i>
+                <span class="logo-text">AquaHarvest</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="assessment.html" class="nav-link cta-button">Start Assessment</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-subtitle">
+                    <span class="typing-animation" data-text="Sustainable Water Management Solutions"></span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="word" data-delay="0">Transform</span>
+                    <span class="word" data-delay="200">Your</span>
+                    <span class="word gradient-text" data-delay="400">Rooftop</span>
+                    <br>
+                    <span class="word" data-delay="600">Into</span>
+                    <span class="word" data-delay="800">Water</span>
+                    <span class="word gradient-text" data-delay="1000">Harvesting</span>
+                </h1>
+                <p class="hero-description">
+                    <span class="fade-in-text" data-delay="1500">
+                        Assess your property's rainwater harvesting potential instantly. 
+                        Get personalized recommendations, cost estimates, and implementation 
+                        guidance for sustainable water conservation.
+                    </span>
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="startAssessmentBtn">
+                        <i class="fas fa-chart-line"></i>
+                        Start Assessment
+                        <div class="button-overlay"></div>
+                    </button>
+                    <button class="btn-secondary" id="learnMoreBtn">
+                        <i class="fas fa-play-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+                <div class="location-status">
+                    <div class="location-info" id="locationInfo">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="locationText">Detecting your location...</span>
+                    </div>
+                    <div class="weather-info" id="weatherInfo">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span id="weatherText">Loading weather data...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="water-drop-animation">
+                    <div class="water-drop"></div>
+                    <div class="ripple-effect"></div>
+                </div>
+                <div class="floating-elements">
+                    <div class="element element-1">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="element element-2">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <div class="element element-3">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Assessment Features</h2>
+                <p class="section-subtitle">Everything you need for effective rainwater harvesting planning</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Location Analysis</h3>
+                    <p>GIS-based assessment of your property's geographical characteristics and groundwater potential</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Feasibility Calculator</h3>
+                    <p>Real-time calculations for rainwater collection capacity and system requirements</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Cost Estimation</h3>
+                    <p>Detailed cost breakdown and ROI analysis for your rainwater harvesting investment</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>System Design</h3>
+                    <p>Recommended dimensions and specifications for recharge pits, trenches, and storage</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <h3>Rainfall Analytics</h3>
+                    <p>Historical and predictive rainfall data analysis for your specific location</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environmental Impact</h3>
+                    <p>Carbon footprint reduction and environmental benefits assessment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Empowering Sustainable Water Management</h2>
+                    <p>
+                        AquaHarvest is developed in collaboration with the Central Ground Water Board (CGWB) 
+                        to promote public participation in groundwater conservation. Our platform combines 
+                        advanced GIS technology with user-friendly interfaces to make rainwater harvesting 
+                        accessible to everyone.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">10M+</div>
+                            <div class="stat-label">Liters Saved Annually</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Assessments Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">User Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="water-cycle-animation">
+                        <div class="cycle-element sun">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="cycle-element cloud">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="cycle-element rain">
+                            <i class="fas fa-cloud-rain"></i>
+                        </div>
+                        <div class="cycle-element house">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="cycle-element storage">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-tint"></i>
+                        <span>AquaHarvest</span>
+                    </div>
+                    <p>Transforming rooftops into sustainable water sources for a better future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="assessment.html">Assessment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> support@aquaharvest.in</p>
+                        <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AquaHarvest. All rights reserved. | Powered by Central Ground Water Board</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
